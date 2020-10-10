@@ -56,3 +56,11 @@ Types of triggers: HttpTrigger, TimerTrigger, BlobTrigger, CosmosDbTrigger. All 
 
 ### Code-first Technologies Compared
 This is like comparing Beanstalk and Lambda. Azure Functions are fully managed by Azure, WebJobs require some attention for scaling, *but* you can make use of the host system.
+
+## Choosing a Service
+As a developer, it's either going to be *Azure Functions* or *WebJobs*, because you can write as much code as you want.
+For the most part, *Azure Functions* seem like the way to go. But if you need access to the **JobHost**, you'll need a *WebJob*.
+Also, if you need a **retry mechanism**, go for *WebJobs*.
+Depending on your requirements or your own preference, you can mix these technologies as much as you want, no one is stopping you.
+If you ever need to pick between the *Design-first Technologies*, keep in mind that you can't modify the code behind *Power Automate*,
+so my safe bet is to go for *Logic Apps*.
